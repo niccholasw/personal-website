@@ -6,7 +6,7 @@ import CursorTrail from "./components/CursorTrail";
 
 const TypewriterText = () => {
 	const [text, setText] = useState("");
-	const fullText = "Innovate, Engineer, Create.";
+	const fullText = "Engineer, Innovate, Create.";
 	const [isTyping, setIsTyping] = useState(true);
 
 	useEffect(() => {
