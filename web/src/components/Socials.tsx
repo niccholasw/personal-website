@@ -5,7 +5,7 @@ const Socials = () => {
 	return (
 		<motion.div
 			className="w-52 h-12 bg-purple-500 rounded-lg flex justify-center items-center gap-6"
-			initial={{ opacity: 0.6 }}
+			initial={{ opacity: 0 }}
 			whileInView={{
 				opacity: 1,
 				scale: 1.25,
@@ -15,7 +15,7 @@ const Socials = () => {
 			}}
 			viewport={{
 				amount: 0.8,
-				margin: "-15%",
+				margin: "-4%",
 				// once: true,
 			}}>
 			<a

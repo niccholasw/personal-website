@@ -128,7 +128,7 @@ const App = () => {
 				))}
 			</div>
 			{/* footer */}
-			<div className="flex justify-center items-center pt-[140%] z-50">
+			<div className="flex justify-center items-center pt-[147%] z-50">
 				<Socials />
 			</div>
 		</div>
