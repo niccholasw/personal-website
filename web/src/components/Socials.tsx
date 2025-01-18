@@ -4,11 +4,11 @@ import { Github, Linkedin, Instagram } from "lucide-react";
 const Socials = () => {
 	return (
 		<motion.div
-			className="w-52 h-12 bg-pink-400 rounded-lg flex justify-center items-center gap-6"
-			initial={{ opacity: 0 }}
+			className="w-52 h-12 bg-purple-500 rounded-lg flex justify-center items-center gap-6"
+			initial={{ opacity: 0.6 }}
 			whileInView={{
 				opacity: 1,
-				scale: 1.5,
+				scale: 1.25,
 				transition: {
 					duration: 1.25,
 				},

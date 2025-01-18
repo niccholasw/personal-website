@@ -1,7 +1,44 @@
 import { motion } from "framer-motion";
+import { useState, useEffect } from "react";
 import Socials from "./components/Socials";
 import TechIcon from "./components/TechIcon";
 import CursorTrail from "./components/CursorTrail";
+
+const TypewriterText = () => {
+	const [text, setText] = useState("");
+	const fullText = "Innovate, Engineer, Create.";
+	const [isTyping, setIsTyping] = useState(true);
+
+	useEffect(() => {
+		if (isTyping) {
+			if (text.length < fullText.length) {
+				const timeout = setTimeout(() => {
+					setText(fullText.slice(0, text.length + 1));
+				}, 100); // Adjust typing speed here
+				return () => clearTimeout(timeout);
+			} else {
+				setIsTyping(false);
+				// Reset after a delay
+				setTimeout(() => {
+					setText("");
+					setIsTyping(true);
+				}, 2000); // Wait before restarting
+			}
+		}
+	}, [text, isTyping]);
+
+	return (
+		<div className="relative inline-block">
+			<span className="text-xl font-bold font-mono">{text}</span>
+			<motion.span
+				className="absolute ml-1 -mr-1 font-mono"
+				animate={{ opacity: [1, 0] }}
+				transition={{ duration: 0.8, repeat: Infinity, ease: "steps(1)" }}>
+				|
+			</motion.span>
+		</div>
+	);
+};
 
 const App = () => {
 	const techIcons = [
@@ -57,13 +94,13 @@ const App = () => {
 			<CursorTrail />
 			{/* header */}
 			<motion.div
-				className="fixed inset-0 flex flex-col items-center justify-center pointer-events-none z-40"
+				className="fixed inset-0 flex flex-col items-center justify-center pointer-events-none z-999"
 				whileHover={{ scale: 1.2 }}
 				transition={{ duration: 0.5 }}>
 				<h1 className="text-4xl font-bold font-mono">Nicholas Wilson</h1>
-				<h1 className="text-xl font-bold font-mono py-2">
-					Innovate, Engineer, Create
-				</h1>
+				<div className="py-2">
+					<TypewriterText />
+				</div>
 			</motion.div>
 			{/* tech stack icons */}
 			<div className="relative">
@@ -74,7 +111,7 @@ const App = () => {
 				))}
 			</div>
 			{/* footer */}
-			<div className="h-4/5 pl-1/2">
+			<div className="flex justify-center items-center pt-[140%] z-50">
 				<Socials />
 			</div>
 		</div>

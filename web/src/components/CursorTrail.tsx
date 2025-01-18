@@ -46,7 +46,7 @@ const CursorTrail = () => {
 			{trail.map((point, index) => (
 				<motion.div
 					key={index}
-					className="absolute w-3 h-3 rounded-full bg-red-300"
+					className="absolute w-3 h-3 rounded-full bg-white z-100"
 					style={{
 						left: point.x,
 						top: point.y,
