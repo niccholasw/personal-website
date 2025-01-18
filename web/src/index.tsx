@@ -10,6 +10,23 @@ const TypewriterText = () => {
 	const [isTyping, setIsTyping] = useState(true);
 
 	useEffect(() => {
+		document.title = "niccholasw";
+		const setFavicon = (iconUrl: string) => {
+			const link = document.querySelector("link[rel='icon']");
+			if (link) {
+				link.setAttribute("href", iconUrl);
+			} else {
+				const newLink = document.createElement("link");
+				newLink.setAttribute("rel", "icon");
+				newLink.setAttribute("href", iconUrl);
+				document.head.appendChild(newLink);
+			}
+		};
+
+		setFavicon("https://cdn.jsdelivr.net/npm/devicons@1.8.0/!SVG/code.svg");
+	}, []);
+
+	useEffect(() => {
 		if (isTyping) {
 			if (text.length < fullText.length) {
 				const timeout = setTimeout(() => {
