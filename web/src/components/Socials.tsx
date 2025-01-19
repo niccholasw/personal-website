@@ -15,7 +15,7 @@ const Socials = () => {
 			}}
 			viewport={{
 				amount: 0.8,
-				margin: "-4%",
+				// margin: "-4%",
 				// once: true,
 			}}>
 			<a

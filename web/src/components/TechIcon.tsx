@@ -10,7 +10,7 @@ interface TechIconProps {
 const TechIcon = ({ src, alt, width = "50", height = "50" }: TechIconProps) => {
 	return (
 		<motion.div
-			className="rounded-lg flex justify-center items-center"
+			className="hidden xl:block rounded-lg justify-center items-center"
 			initial={{ opacity: 0 }}
 			whileInView={{
 				opacity: 1,

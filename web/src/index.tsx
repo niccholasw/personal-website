@@ -107,11 +107,11 @@ const App = () => {
 	];
 
 	return (
-		<div className="h-[300vh] w-full bg-gradient-to-b from-pink-200 to-purple-200">
+		<div className="relative h-[100vh] md:h-[180vh] lg:h-[260vh] xl:[220vh] 2xl:[300vh] w-full bg-gradient-to-b from-pink-200 to-purple-200">
 			<CursorTrail />
 			{/* header */}
 			<motion.div
-				className="fixed inset-0 flex flex-col items-center justify-center pointer-events-none z-999"
+				className="fixed inset-0 flex flex-col items-center justify-center pointer-events-none z-9999"
 				whileHover={{ scale: 1.2 }}
 				transition={{ duration: 0.5 }}>
 				<h1 className="text-4xl font-bold font-mono">Nicholas Wilson</h1>
@@ -120,7 +120,7 @@ const App = () => {
 				</div>
 			</motion.div>
 			{/* tech stack icons */}
-			<div className="relative">
+			<div className="relative z-1">
 				{techIcons.map((icon, index) => (
 					<div key={index} className={`absolute ${icon.position}`}>
 						<TechIcon src={icon.src} alt={icon.alt} width="80" height="80" />
@@ -128,7 +128,7 @@ const App = () => {
 				))}
 			</div>
 			{/* footer */}
-			<div className="flex justify-center items-center pt-[147%] z-50">
+			<div className="absolute bottom-0 left-0 right-0 w-full flex justify-center items-center pb-16 z-50">
 				<Socials />
 			</div>
 		</div>

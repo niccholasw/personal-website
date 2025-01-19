@@ -42,7 +42,7 @@ const CursorTrail = () => {
 	}, [mousePosition]);
 
 	return (
-		<div className="pointer-events-none fixed inset-0 z-49">
+		<div className="hidden md:block pointer-events-none fixed inset-0 z-49">
 			{trail.map((point, index) => (
 				<motion.div
 					key={index}
