@@ -45,7 +45,7 @@ const TypewriterText = () => {
 	}, [text, isTyping]);
 
 	return (
-		<div className="relative inline-block">
+		<div className="relative inline-block no-scrollbar">
 			<span className="text-xl font-bold font-mono">{text}</span>
 			<motion.span
 				className="absolute ml-1 -mr-1 font-mono"
@@ -107,7 +107,7 @@ const App = () => {
 	];
 
 	return (
-		<div className="relative h-[100vh] md:h-[180vh] lg:h-[260vh] xl:[220vh] 2xl:[300vh] w-full bg-gradient-to-b from-pink-200 to-purple-200">
+		<div className="relative h-[100vh] md:h-[180vh] lg:h-[200vh] xl:h-[220vh] 2xl:h-[300vh] w-full bg-gradient-to-b from-pink-200 to-purple-200 no-scrollbar">
 			<CursorTrail />
 			{/* header */}
 			<motion.div
