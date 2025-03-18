@@ -107,7 +107,7 @@ const App = () => {
 	];
 
 	return (
-		<div className="relative h-[100vh] md:h-[180vh] lg:h-[200vh] xl:h-[220vh] 2xl:h-[300vh] w-full bg-gradient-to-b from-pink-200 to-purple-200 no-scrollbar">
+		<div className=" relative md:h-[180vh] lg:h-[200vh] xl:h-[220vh] 2xl:h-[300vh] w-full h-dvh h-dvw bg-gradient-to-b from-pink-200 to-purple-200 no-scrollbar">
 			<CursorTrail />
 			{/* header */}
 			<motion.div
