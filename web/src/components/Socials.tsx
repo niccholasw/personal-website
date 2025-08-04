@@ -32,13 +32,6 @@ const Socials = () => {
 				className="text-white hover:text-gray-200 transition-colors">
 				<Linkedin size={24} />
 			</a>
-			<a
-				href="https://instagram.com/__nicccccc"
-				target="_blank"
-				rel="noopener noreferrer"
-				className="text-white hover:text-gray-200 transition-colors">
-				<Instagram size={24} />
-			</a>
 		</motion.div>
 	);
 };
